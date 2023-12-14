@@ -1,0 +1,337 @@
+---
+import "@/styles/globals.css";
+import MaxWidthWrapper from "../components/MaxWidthWrapper.astro";
+import Layout from "../layouts/Layout.astro";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Image } from "astro:assets";
+import { ChevronRight, User } from "lucide-react";
+import { cn } from "@/lib/utils";
+---
+
+<Layout title="Selamat datang di PT Anugrah Teknologi Kecerdasan Buatan">
+  <main>
+    <!-- Hero -->
+    <div class="bg-[url('/Techy.png')] bg-no-repeat bg-right">
+      <MaxWidthWrapper className="min-h-screen pt-20 flex">
+        <div
+          class="w-[50%] h-[calc(100vh-5rem)] pt-20 flex flex-col justify-center gap-4"
+        >
+          <div class="text-6xl">PT. Anugrah Teknologi Kecerdasan Buatan</div>
+          <div>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
+            volutpat facilisis turpis, sit amet venenatis quam dictum et. Fusce
+            et leo rhoncus, lobortis lectus eget, hendrerit eros. Nullam ut
+            congue sapien.
+          </div>
+          <div>
+            <Button className="bg-first hover:bg-first/50">
+              More About Us
+            </Button>
+          </div>
+        </div>
+      </MaxWidthWrapper>
+    </div>
+
+    <!-- About Us -->
+    <div class="min-h-screen flex items-center justify-center md:mx-20">
+      <Image
+        src={"/blob-haikei.png"}
+        width={750}
+        height={500}
+        alt="blob"
+        class="flex-shrink-0"
+      />
+      <div class="flex flex-col">
+        <div class="font-bold text-4xl">About Us</div>
+        <div>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec
+          augue velit. Vestibulum rutrum bibendum nulla, et aliquet est iaculis
+          sed. Mauris facilisis leo sed ornare placerat. Quisque ut magna nec
+          justo imperdiet pulvinar. Aenean scelerisque sem quis odio malesuada,
+          non imperdiet nibh malesuada. Fusce elementum accumsan tincidunt.
+          Praesent ultrices fringilla tortor, ut porta tortor tincidunt sed.
+          Aliquam semper ante sed elit pulvinar, a interdum orci consequat. In
+          pretium cursus odio.
+        </div>
+      </div>
+    </div>
+
+    <!-- Carousel -->
+    <div class="min-h-screen flex items-center bg-second">
+      <MaxWidthWrapper className="flex flex-col gap-12">
+        <div class="flex flex-col">
+          <div class="text-first text-xl">Services</div>
+          <div class="font-bold text-4xl">Provided Services</div>
+        </div>
+        <div class="grid grid-cols-3 gap-14">
+          <div
+            class="bg-white flex flex-col gap-4 px-8 py-16 rounded-2xl items-center"
+          >
+            <div class="bg-second rounded-full w-20 h-20"></div>
+            <div class="text-first text-2xl font-bold text-center">
+              Web Development
+            </div>
+            <div class="text-center">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec
+              augue velit.
+            </div>
+          </div>
+          <div
+            class="bg-white flex flex-col gap-4 px-8 py-16 rounded-3xl items-center"
+          >
+            <div class="bg-second rounded-full w-20 h-20"></div>
+            <div class="text-first text-2xl font-bold text-center">
+              IT Courses
+            </div>
+            <div class="text-center">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec
+              augue velit.
+            </div>
+          </div>
+          <div
+            class="bg-white flex flex-col gap-4 px-8 py-16 rounded-3xl items-center"
+          >
+            <div class="bg-second rounded-full w-20 h-20"></div>
+            <div class="text-first text-2xl font-bold text-center">
+              Research
+            </div>
+            <div class="text-center">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec
+              augue velit.
+            </div>
+          </div>
+        </div>
+        <div class="w-full flex justify-center">
+          <Button className="bg-first hover:bg-first/50 rounded-full px-12">
+            More Details
+          </Button>
+        </div>
+      </MaxWidthWrapper>
+    </div>
+
+    <!-- Projects -->
+    <div class="h-screen flex flex-row">
+      <div class="flex-[65] bg-first px-12 py-20">
+        <div class="flex flex-col gap-4">
+          <div class="text-7xl text-white">Our Projects</div>
+          <div class="text-white">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil
+            excepturi distinctio repellendus velit veritatis hic quasi nobis
+            iure quia a accusamus, voluptate natus omnis necessitatibus nostrum
+            obcaecati maiores temporibus consectetur. Lorem ipsum dolor sit
+            amet, consectetur adipisicing elit. Quo deleniti alias tempora
+            assumenda accusamus modi voluptatum obcaecati, illum culpa maxime
+            corrupti quibusdam distinctio aliquid maiores, similique nihil vel
+            libero minima.
+          </div>
+          <div>
+            <Button
+              className="bg-second hover:bg-second/50 text-first flex justify-between"
+            >
+              <div>Read More</div>
+              <ChevronRight />
+            </Button>
+          </div>
+        </div>
+      </div>
+      <div class="flex-[127]">
+        <div class="px-32 h-full">
+          <div class="flex-col flex gap-8 justify-center h-full">
+            <div class="flex gap-4">
+              <div
+                class="bg-first px-8 py-6 rounded-md text-xl text-white text-center h-fit"
+              >
+                01 <br /> Aug
+              </div>
+              <div class="flex-shrink-0 rounded-md">
+                <Image
+                  src={"/project1.jpeg"}
+                  alt="project1"
+                  width={125}
+                  height={500}
+                  class="rounded-md"
+                />
+              </div>
+              <div class="flex flex-col gap-2">
+                <div class="text-first text-2xl font-semibold">
+                  LOREM IPSUM SI AMET
+                </div>
+                <div class="flex flex-1">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Minima repellat, perspiciatis similique ipsam illo ipsum eum
+                  quam at, id provident aspernatur eaque numquam quidem sunt
+                  veniam soluta hic. Autem, minima?
+                </div>
+              </div>
+            </div>
+            <div class="flex gap-4">
+              <div
+                class="bg-first px-8 py-6 rounded-md text-xl text-white text-center h-fit"
+              >
+                01 <br /> Aug
+              </div>
+              <div class="flex-shrink-0 rounded-md">
+                <Image
+                  src={"/project2.jpeg"}
+                  alt="project1"
+                  width={125}
+                  height={500}
+                  class="rounded-md"
+                />
+              </div>
+              <div class="flex flex-col gap-2">
+                <div class="text-first text-2xl font-semibold">
+                  LOREM IPSUM SI AMET
+                </div>
+                <div class="flex flex-1">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Minima repellat, perspiciatis similique ipsam illo ipsum eum
+                  quam at, id provident aspernatur eaque numquam quidem sunt
+                  veniam soluta hic. Autem, minima?
+                </div>
+              </div>
+            </div>
+            <div class="flex gap-4">
+              <div
+                class="bg-first px-8 py-6 rounded-md text-xl text-white text-center h-fit"
+              >
+                01 <br /> Aug
+              </div>
+              <div class="flex-shrink-0 rounded-md">
+                <Image
+                  src={"/project3.jpeg"}
+                  alt="project1"
+                  width={125}
+                  height={500}
+                  class="rounded-md"
+                />
+              </div>
+              <div class="flex flex-col gap-2">
+                <div class="text-first text-2xl font-semibold">
+                  LOREM IPSUM SI AMET
+                </div>
+                <div class="flex flex-1">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Minima repellat, perspiciatis similique ipsam illo ipsum eum
+                  quam at, id provident aspernatur eaque numquam quidem sunt
+                  veniam soluta hic. Autem, minima?
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Testimonial -->
+    <div class="min-h-screen bg-[#C6D7E8]">
+      <div class="container py-12 flex flex-col gap-12">
+        <div class="flex flex-col">
+          <div class="text-[#326BA4] font-bold text-6xl">Testimonials</div>
+          <div class="flex justify-between">
+            <div class="flex-1 text-xl">
+              SEE WHAT OUR CUSTOMERS <br /> THINK ABOUT US
+            </div>
+            <div class="flex-1 text-right text-sm">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta
+              provident optio quibusdam quisquam quas distinctio pariatur
+              maiores dignissimos, et a odit recusandae fugiat reprehenderit,
+              accusamus at asperiores? Corporis, aperiam tenetur?
+            </div>
+          </div>
+        </div>
+        <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8">
+          <div
+            class="flex flex-col bg-[#DFE6EC] rounded-md p-8 gap-4 border-b-8 border-[#326BA4] shadow-2xl"
+          >
+            <div class="text-[#326BA4] text-2xl font-bold">
+              &quot;LOREM UPSUM SI AMET&quot;
+            </div>
+            <div class="text-justify text-sm">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Perspiciatis ab nostrum minus repudiandae, libero, voluptates
+              dicta ullam magni atque laborum consequuntur dolorem voluptatibus
+              cumque enim totam porro inventore numquam architecto!
+            </div>
+            <div class="flex gap-4">
+              <div class="rounded-full bg-white p-2">
+                <User />
+              </div>
+              <div class="flex items-center">Kaede Nakamura</div>
+            </div>
+          </div>
+          <div
+            class="flex flex-col bg-[#DFE6EC] rounded-md p-8 gap-4 border-b-8 border-[#326BA4] shadow-2xl"
+          >
+            <div class="text-[#326BA4] text-2xl font-bold">
+              &quot;LOREM UPSUM SI AMET&quot;
+            </div>
+            <div class="text-justify text-sm">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Perspiciatis ab nostrum minus repudiandae, libero, voluptates
+              dicta ullam magni atque laborum consequuntur dolorem voluptatibus
+              cumque enim totam porro inventore numquam architecto!
+            </div>
+            <div class="flex gap-4">
+              <div class="rounded-full bg-white p-2">
+                <User />
+              </div>
+              <div class="flex items-center">Kaede Nakamura</div>
+            </div>
+          </div>
+          <div
+            class="flex flex-col bg-[#DFE6EC] rounded-md p-8 gap-4 border-b-8 border-[#326BA4] shadow-2xl"
+          >
+            <div class="text-[#326BA4] text-2xl font-bold">
+              &quot;LOREM UPSUM SI AMET&quot;
+            </div>
+            <div class="text-justify text-sm">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Perspiciatis ab nostrum minus repudiandae, libero, voluptates
+              dicta ullam magni atque laborum consequuntur dolorem voluptatibus
+              cumque enim totam porro inventore numquam architecto!
+            </div>
+            <div class="flex gap-4">
+              <div class="rounded-full bg-white p-2">
+                <User />
+              </div>
+              <div class="flex items-center">Kaede Nakamura</div>
+            </div>
+          </div>
+        </div>
+        <div class="flex w-full justify-center">
+          <Button
+            class="bg-[#326BA4] hover:bg-[#326BA4]/50 flex justify-between"
+          >
+            <div>Read More</div>
+            <ChevronRight />
+          </Button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact -->
+    <div
+      class="flex flex-col items-center gap-8 py-12 bg-[url('/indo.jpeg')] bg-cover text-white"
+    >
+      <div class="text-4xl font-bold">Contact Us</div>
+      <Input
+        placeholder="Name"
+        className={cn(
+          "max-w-lg bg-transparent border-t-0 border-x-0 rounded-none border-b-2 border-white placeholder:text-white focus-visible:ring-0 focus-visible:ring-offset-0"
+        )}
+      />
+      <Input
+        placeholder="Email"
+        className="max-w-lg bg-transparent border-t-0 border-x-0 rounded-none border-b-2 border-white placeholder:text-white focus-visible:ring-0 focus-visible:ring-offset-0"
+      />
+      <Textarea
+        placeholder="Message"
+        rows={5}
+        className="max-w-lg bg-transparent rounded-none border-2 border-white placeholder:text-white focus-visible:ring-0 focus-visible:ring-offset-0"
+      />
+    </div>
+  </main>
+</Layout>
